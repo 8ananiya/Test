@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+</head>
+
+<body>
+
+<h1>Profile</h1>
+
+<div>
+  <b>Username:</b> <span id="username"></span>
+</div>
+
+<div>
+  <b>Name:</b> <span id="name"></span>  
+</div>
+
+<div>
+  <b>Email:</b> <span id="email"></span>
+</div>
+
+<div>
+  <b>Member Since:</b> <span id="member_since"></span> 
+</div>
+
+<h2>Appointments</h2>
+
+<div id="appointments"></div>
+
+<a href="logout.php">Logout</a>
+
+<script>
+  // Get profile data from API
+  // profile.html
+
+$(document).ready(function() {
+
+  $.ajax({
+    url: 'profile.php',
+    method: 'GET',
+    success: function(response) {
+      // Parse JSON response
+    }
+  });
+
+});
+</script>
